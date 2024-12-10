@@ -1,0 +1,12 @@
+<h1>Messages#show</h1>
+<p>Find me in app/views/messages/show.html.erb</p>
+
+<%= turbo_stream_from "messages" %>
+
+<div id="messages"></div>
+
+<ul>
+  <% Message.find_each do |msg| %>
+    <li><%= msg.body %></li>
+  <% end %>
+</ul>
